@@ -82,29 +82,53 @@ foreach (var name in files) {
 	Console.WriteLine($"=== {name}.png ({w}x{h}) ===");
 	double score;
 
+	var bc7enc_params = new bc7enc.NET.Types.BC7EncParams();
+
 	sw.Reset();
+	bc7enc_params.TargetFormat = bc7enc.NET.Types.EncodeFormat.BC1;
 	sw.Start();
-	byte[] bc7enc_bc1 = bc7enc.NET.Functions.EncodePixels(input, w, h, bc7enc.NET.Types.EncodeFormat.BC1, false);
+	byte[] bc7enc_bc1 = bc7enc.NET.Functions.EncodePixels(input, w, h, bc7enc_params);
 	sw.Stop();
 	score = ssim(inputpng, bc7enc_bc1, bw, bh, (int)w, (int)h, CMP_FORMAT.BC1);
-	Console.WriteLine($"BC1 (bc7enc): {sw.Elapsed.TotalSeconds} | {score}");
+	Console.WriteLine($"BC1 (bc7enc, 18): {sw.Elapsed.TotalSeconds} | {score}");
 
 	sw.Reset();
+	bc7enc_params.BC13_Quality = 14;
 	sw.Start();
-	byte[] bc7enc_bc3 = bc7enc.NET.Functions.EncodePixels(input, w, h, bc7enc.NET.Types.EncodeFormat.BC3, true);
+	bc7enc_bc1 = bc7enc.NET.Functions.EncodePixels(input, w, h, bc7enc_params);
+	sw.Stop();
+	score = ssim(inputpng, bc7enc_bc1, bw, bh, (int)w, (int)h, CMP_FORMAT.BC1);
+	Console.WriteLine($"BC1 (bc7enc, 14): {sw.Elapsed.TotalSeconds} | {score}");
+
+	sw.Reset();
+	bc7enc_params.TargetFormat = bc7enc.NET.Types.EncodeFormat.BC3;
+	bc7enc_params.BC13_Quality = 18;
+	sw.Start();
+	byte[] bc7enc_bc3 = bc7enc.NET.Functions.EncodePixels(input, w, h, bc7enc_params);
 	sw.Stop();
 	score = ssim(inputpng, bc7enc_bc3, bw, bh, (int)w, (int)h, CMP_FORMAT.BC3);
-	Console.WriteLine($"BC3 (bc7enc): {sw.Elapsed.TotalSeconds} | {score}");
+	Console.WriteLine($"BC3 (bc7enc, 18): {sw.Elapsed.TotalSeconds} | {score}");
 
+	sw.Reset();
+	bc7enc_params.BC13_Quality = 14;
 	sw.Start();
-	byte[] bc7enc_bc7 = bc7enc.NET.Functions.EncodePixels(input, w, h, bc7enc.NET.Types.EncodeFormat.BC7, false);
+	bc7enc_bc3 = bc7enc.NET.Functions.EncodePixels(input, w, h, bc7enc_params);
+	sw.Stop();
+	score = ssim(inputpng, bc7enc_bc3, bw, bh, (int)w, (int)h, CMP_FORMAT.BC3);
+	Console.WriteLine($"BC3 (bc7enc, 14): {sw.Elapsed.TotalSeconds} | {score}");
+
+	sw.Reset();
+	bc7enc_params.TargetFormat = bc7enc.NET.Types.EncodeFormat.BC7;
+	sw.Start();
+	byte[] bc7enc_bc7 = bc7enc.NET.Functions.EncodePixels(input, w, h, bc7enc_params);
 	sw.Stop();
 	score = ssim(inputpng, bc7enc_bc7, bw, bh, (int)w, (int)h, CMP_FORMAT.BC7);
 	Console.WriteLine($"BC7 (bc7enc): {sw.Elapsed.TotalSeconds} | {score}");
 
 	sw.Reset();
+	bc7enc_params.BC7_Perceptual = true;
 	sw.Start();
-	byte[] bc7enc_bc7_perceptual = bc7enc.NET.Functions.EncodePixels(input, w, h, bc7enc.NET.Types.EncodeFormat.BC7, true);
+	byte[] bc7enc_bc7_perceptual = bc7enc.NET.Functions.EncodePixels(input, w, h, bc7enc_params);
 	sw.Stop();
 	score = ssim(inputpng, bc7enc_bc7_perceptual, bw, bh, (int)w, (int)h, CMP_FORMAT.BC7);
 	Console.WriteLine($"BC7 (bc7enc_perceptual): {sw.Elapsed.TotalSeconds} | {score}");

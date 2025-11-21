@@ -1,153 +1,268 @@
-                      Encoding Time | SSIM
+Using 12 threads for Compressonator & bc7enc
+                      Encoding Time |  SSIM
+                          (Seconds) |
 === carrots.png (2448x2448) ===
-BC1 (bc7enc):                0.94   | 84.3
-BC3 (bc7enc):                0.78   | 84.21
-BC7 (bc7enc):                4.04   | 89.74
-BC7 (bc7enc_perceptual):     2.47   | 90.19
-BC1 (Compressonator, 1.0):   0.33   | 82.58
-BC3 (Compressonator, 1.0):   0.35   | 82.17
-BC7 (Compressonator, 0.25):  57.28  | 89.67
+BC1 (bc7enc, 18):              0.99 |  84.30
+BC1 (bc7enc, 14):              0.46 |  84.04
+BC1 (Compressonator, 1.0):     0.33 |  82.58
+---
+BC3 (bc7enc, 18):              0.78 |  84.21
+BC3 (bc7enc, 14):              0.32 |  84.05
+BC3 (Compressonator, 1.0):     0.34 |  82.17
+---
+BC7 (bc7enc):                  3.26 |  89.74
+BC7 (bc7enc_perceptual):       2.41 |  90.19
+BC7 (Compressonator, 0.25):   55.03 |  89.67
+---
+
 === colorpatch.png (3840x2160) ===
-BC1 (bc7enc):                0.2    | 90.68
-BC3 (bc7enc):                0.18   | 63.33
-BC7 (bc7enc):                1.62   | 100
-BC7 (bc7enc_perceptual):     0.76   | 100
-BC1 (Compressonator, 1.0):   0.05   | 64.36
-BC3 (Compressonator, 1.0):   0.07   | 63.81
-BC7 (Compressonator, 0.25):  16.03  | 100
+BC1 (bc7enc, 18):              0.19 |  90.68
+BC1 (bc7enc, 14):              0.09 |  90.68
+BC1 (Compressonator, 1.0):     0.05 |  64.36
+---
+BC3 (bc7enc, 18):              0.14 |  63.33
+BC3 (bc7enc, 14):              0.06 |  64.41
+BC3 (Compressonator, 1.0):     0.08 |  63.81
+---
+BC7 (bc7enc):                  1.43 | 100.00
+BC7 (bc7enc_perceptual):       0.94 | 100.00
+BC7 (Compressonator, 0.25):   17.93 | 100.00
+---
+
 === flowers.png (2048x2048) ===
-BC1 (bc7enc):                0.7    | 84.92
-BC3 (bc7enc):                0.61   | 84.92
-BC7 (bc7enc):                3.46   | 92.26
-BC7 (bc7enc_perceptual):     2.16   | 93.95
-BC1 (Compressonator, 1.0):   0.28   | 82.75
-BC3 (Compressonator, 1.0):   0.3    | 82.46
-BC7 (Compressonator, 0.25):  42.35  | 92.47
+BC1 (bc7enc, 18):              0.69 |  84.92
+BC1 (bc7enc, 14):              0.29 |  84.72
+BC1 (Compressonator, 1.0):     0.28 |  82.75
+---
+BC3 (bc7enc, 18):              0.59 |  84.92
+BC3 (bc7enc, 14):              0.21 |  84.70
+BC3 (Compressonator, 1.0):     0.31 |  82.46
+---
+BC7 (bc7enc):                  2.83 |  92.26
+BC7 (bc7enc_perceptual):       2.16 |  93.95
+BC7 (Compressonator, 0.25):   44.40 |  92.47
+---
+
 === helicopter.png (2048x2048) ===
-BC1 (bc7enc):                0.73   | 82.65
-BC3 (bc7enc):                0.7    | 82.62
-BC7 (bc7enc):                3.12   | 87.44
-BC7 (bc7enc_perceptual):     2.21   | 88.03
-BC1 (Compressonator, 1.0):   0.21   | 81.18
-BC3 (Compressonator, 1.0):   0.21   | 80.91
-BC7 (Compressonator, 0.25):  54.65  | 87.5
+BC1 (bc7enc, 18):              0.63 |  82.65
+BC1 (bc7enc, 14):              0.28 |  82.64
+BC1 (Compressonator, 1.0):     0.19 |  81.18
+---
+BC3 (bc7enc, 18):              0.54 |  82.62
+BC3 (bc7enc, 14):              0.19 |  82.55
+BC3 (Compressonator, 1.0):     0.20 |  80.91
+---
+BC7 (bc7enc):                  2.43 |  87.44
+BC7 (bc7enc_perceptual):       2.09 |  88.03
+BC7 (Compressonator, 0.25):   50.34 |  87.50
+---
+
 === noise_extreme_2.png (4096x4096) ===
-BC1 (bc7enc):                4.77   | -9.8
-BC3 (bc7enc):                3.94   | -9.8
-BC7 (bc7enc):                15.62  | 36.26
-BC7 (bc7enc_perceptual):     9.8    | 58.47
-BC1 (Compressonator, 1.0):   2.39   | -13.86
-BC3 (Compressonator, 1.0):   2.46   | -19.75
-BC7 (Compressonator, 0.25):  246.13 | 46.43
+BC1 (bc7enc, 18):              4.57 |  -9.80
+BC1 (bc7enc, 14):              1.44 |  -9.83
+BC1 (Compressonator, 1.0):     2.38 | -13.86
+---
+BC3 (bc7enc, 18):              3.62 |  -9.80
+BC3 (bc7enc, 14):              0.99 |  -9.92
+BC3 (Compressonator, 1.0):     2.48 | -19.75
+---
+BC7 (bc7enc):                 11.44 |  36.26
+BC7 (bc7enc_perceptual):       9.30 |  58.47
+BC7 (Compressonator, 0.25):  247.74 |  46.43
+---
+
 === noise_extreme.png (4096x4096) ===
-BC1 (bc7enc):                4.12   | 57.07
-BC3 (bc7enc):                3.57   | 57.06
-BC7 (bc7enc):                15.36  | 73.69
-BC7 (bc7enc_perceptual):     9.49   | 80.71
-BC1 (Compressonator, 1.0):   2.33   | 56.27
-BC3 (Compressonator, 1.0):   2.41   | 54.9
-BC7 (Compressonator, 0.25):  236.73 | 75.89
+BC1 (bc7enc, 18):              3.91 |  57.07
+BC1 (bc7enc, 14):              1.56 |  56.85
+BC1 (Compressonator, 1.0):     2.14 |  56.27
+---
+BC3 (bc7enc, 18):              3.68 |  57.06
+BC3 (bc7enc, 14):              1.01 |  56.83
+BC3 (Compressonator, 1.0):     2.40 |  54.90
+---
+BC7 (bc7enc):                 11.33 |  73.69
+BC7 (bc7enc_perceptual):       9.08 |  80.71
+BC7 (Compressonator, 0.25):  219.88 |  75.89
+---
+
 === noise_slight.png (2048x2048) ===
-BC1 (bc7enc):                0.97   | 73.15
-BC3 (bc7enc):                0.84   | 73.14
-BC7 (bc7enc):                3.83   | 82.39
-BC7 (bc7enc_perceptual):     2.59   | 86.22
-BC1 (Compressonator, 1.0):   0.58   | 71.83
-BC3 (Compressonator, 1.0):   0.5    | 71.15
-BC7 (Compressonator, 0.25):  58.67  | 81.85
+BC1 (bc7enc, 18):              0.99 |  73.15
+BC1 (bc7enc, 14):              0.37 |  72.92
+BC1 (Compressonator, 1.0):     0.46 |  71.83
+---
+BC3 (bc7enc, 18):              0.79 |  73.14
+BC3 (bc7enc, 14):              0.25 |  72.91
+BC3 (Compressonator, 1.0):     0.48 |  71.15
+---
+BC7 (bc7enc):                  2.82 |  82.39
+BC7 (bc7enc_perceptual):       2.27 |  86.22
+BC7 (Compressonator, 0.25):   54.97 |  81.85
+---
+
 === normal_avalisuit.png (4096x4096) ===
-BC1 (bc7enc):                3.59   | 45.38
-BC3 (bc7enc):                2.85   | 45.3
-BC7 (bc7enc):                13.64  | 80.31
-BC7 (bc7enc_perceptual):     8.53   | 80.74
-BC1 (Compressonator, 1.0):   1.65   | 41.27
-BC3 (Compressonator, 1.0):   1.64   | 35.88
-BC7 (Compressonator, 0.25):  183.15 | 77.59
+BC1 (bc7enc, 18):              3.51 |  45.38
+BC1 (bc7enc, 14):              1.20 |  44.80
+BC1 (Compressonator, 1.0):     1.52 |  41.27
+---
+BC3 (bc7enc, 18):              2.72 |  45.30
+BC3 (bc7enc, 14):              0.84 |  44.53
+BC3 (Compressonator, 1.0):     1.60 |  35.88
+---
+BC7 (bc7enc):                 10.41 |  80.31
+BC7 (bc7enc_perceptual):       8.16 |  80.74
+BC7 (Compressonator, 0.25):  181.94 |  77.59
+---
+
 === paperclips.png (2448x2448) ===
-BC1 (bc7enc):                0.96   | 86.84
-BC3 (bc7enc):                0.83   | 86.84
-BC7 (bc7enc):                4.5    | 92.76
-BC7 (bc7enc_perceptual):     2.72   | 92.97
-BC1 (Compressonator, 1.0):   0.4    | 85.47
-BC3 (Compressonator, 1.0):   0.42   | 85.23
-BC7 (Compressonator, 0.25):  54.03  | 92.82
+BC1 (bc7enc, 18):              0.97 |  86.84
+BC1 (bc7enc, 14):              0.39 |  86.80
+BC1 (Compressonator, 1.0):     0.39 |  85.47
+---
+BC3 (bc7enc, 18):              0.82 |  86.84
+BC3 (bc7enc, 14):              0.26 |  86.76
+BC3 (Compressonator, 1.0):     0.41 |  85.23
+---
+BC7 (bc7enc):                  3.56 |  92.76
+BC7 (bc7enc_perceptual):       2.60 |  92.97
+BC7 (Compressonator, 0.25):   51.70 |  92.82
+---
+
 === rainbow.png (3840x2160) ===
-BC1 (bc7enc):                0.83   | 89.31
-BC3 (bc7enc):                0.7    | 89.33
-BC7 (bc7enc):                2.25   | 100
-BC7 (bc7enc_perceptual):     1.79   | 89.28
-BC1 (Compressonator, 1.0):   0.12   | 89.05
-BC3 (Compressonator, 1.0):   0.15   | 87.64
-BC7 (Compressonator, 0.25):  79.08  | 89.26
+BC1 (bc7enc, 18):              0.82 |  89.31
+BC1 (bc7enc, 14):              0.41 |  89.31
+BC1 (Compressonator, 1.0):     0.13 |  89.05
+---
+BC3 (bc7enc, 18):              0.70 |  89.33
+BC3 (bc7enc, 14):              0.26 |  89.37
+BC3 (Compressonator, 1.0):     0.15 |  87.64
+---
+BC7 (bc7enc):                  1.52 | 100.00
+BC7 (bc7enc_perceptual):       1.76 |  89.28
+BC7 (Compressonator, 0.25):   77.32 |  89.26
+---
+
 === sap_body.png (4096x4096) ===
-BC1 (bc7enc):                1.15   | 85.36
-BC3 (bc7enc):                0.98   | 85.13
-BC7 (bc7enc):                6.56   | 90.34
-BC7 (bc7enc_perceptual):     3.92   | 90.38
-BC1 (Compressonator, 1.0):   0.24   | 83.41
-BC3 (Compressonator, 1.0):   0.29   | 81.9
-BC7 (Compressonator, 0.25):  88.01  | 90.36
+BC1 (bc7enc, 18):              1.15 |  85.36
+BC1 (bc7enc, 14):              0.55 |  85.35
+BC1 (Compressonator, 1.0):     0.24 |  83.41
+---
+BC3 (bc7enc, 18):              0.98 |  85.13
+BC3 (bc7enc, 14):              0.37 |  85.06
+BC3 (Compressonator, 1.0):     0.33 |  81.90
+---
+BC7 (bc7enc):                  5.52 |  90.34
+BC7 (bc7enc_perceptual):       3.88 |  90.38
+BC7 (Compressonator, 0.25):   85.22 |  90.36
+---
+
 === shanghai.png (2200x1343) ===
-BC1 (bc7enc):                0.46   | 84.49
-BC3 (bc7enc):                0.34   | 84.31
-BC7 (bc7enc):                1.9    | 92.26
-BC7 (bc7enc_perceptual):     1.19   | 92.45
-BC1 (Compressonator, 1.0):   0.2    | 81.3
-BC3 (Compressonator, 1.0):   0.21   | 79.95
-BC7 (Compressonator, 0.25):  17.8   | 92.38
+BC1 (bc7enc, 18):              0.40 |  84.49
+BC1 (bc7enc, 14):              0.19 |  84.42
+BC1 (Compressonator, 1.0):     0.20 |  81.30
+---
+BC3 (bc7enc, 18):              0.36 |  84.31
+BC3 (bc7enc, 14):              0.13 |  84.25
+BC3 (Compressonator, 1.0):     0.22 |  79.95
+---
+BC7 (bc7enc):                  1.52 |  92.26
+BC7 (bc7enc_perceptual):       1.18 |  92.45
+BC7 (Compressonator, 0.25):   17.88 |  92.38
+---
+
 === squares.png (3840x2160) ===
-BC1 (bc7enc):                0.15   | 88.74
-BC3 (bc7enc):                0.14   | 73.49
-BC7 (bc7enc):                1.46   | 95.16
-BC7 (bc7enc_perceptual):     1.06   | 92.52
-BC1 (Compressonator, 1.0):   0.04   | 69.59
-BC3 (Compressonator, 1.0):   0.06   | 66.59
-BC7 (Compressonator, 0.25):  26.14  | 94.67
+BC1 (bc7enc, 18):              0.14 |  88.74
+BC1 (bc7enc, 14):              0.12 |  88.81
+BC1 (Compressonator, 1.0):     0.04 |  69.59
+---
+BC3 (bc7enc, 18):              0.16 |  73.49
+BC3 (bc7enc, 14):              0.09 |  74.38
+BC3 (Compressonator, 1.0):     0.06 |  66.59
+---
+BC7 (bc7enc):                  1.54 |  95.16
+BC7 (bc7enc_perceptual):       1.02 |  92.52
+BC7 (Compressonator, 0.25):   27.18 |  94.67
+---
+
 === texture_avalisuit.png (4096x4096) ===
-BC1 (bc7enc):                2.33   | 83.23
-BC3 (bc7enc):                1.98   | 83.24
-BC7 (bc7enc):                9.29   | 90.47
-BC7 (bc7enc_perceptual):     6.32   | 90.68
-BC1 (Compressonator, 1.0):   0.71   | 79.57
-BC3 (Compressonator, 1.0):   0.7    | 78.57
-BC7 (Compressonator, 0.25):  132.29 | 90.43
+BC1 (bc7enc, 18):              2.63 |  83.23
+BC1 (bc7enc, 14):              0.99 |  83.12
+BC1 (Compressonator, 1.0):     0.65 |  79.57
+---
+BC3 (bc7enc, 18):              1.99 |  83.24
+BC3 (bc7enc, 14):              0.66 |  83.07
+BC3 (Compressonator, 1.0):     0.81 |  78.57
+---
+BC7 (bc7enc):                  7.32 |  90.47
+BC7 (bc7enc_perceptual):       6.22 |  90.68
+BC7 (Compressonator, 0.25):  132.77 |  90.43
+---
+
 === wings.png (2048x2048) ===
-BC1 (bc7enc):                0.37   | 87.95
-BC3 (bc7enc):                0.31   | 86.45
-BC7 (bc7enc):                1.92   | 94.6
-BC7 (bc7enc_perceptual):     1.27   | 94.24
-BC1 (Compressonator, 1.0):   0.09   | 72.06
-BC3 (Compressonator, 1.0):   0.1    | 69.9
-BC7 (Compressonator, 0.25):  27.4   | 94.59
+BC1 (bc7enc, 18):              0.41 |  87.95
+BC1 (bc7enc, 14):              0.19 |  87.92
+BC1 (Compressonator, 1.0):     0.09 |  72.06
+---
+BC3 (bc7enc, 18):              0.32 |  86.45
+BC3 (bc7enc, 14):              0.12 |  86.32
+BC3 (Compressonator, 1.0):     0.10 |  69.90
+---
+BC7 (bc7enc):                  1.58 |  94.60
+BC7 (bc7enc_perceptual):       1.37 |  94.24
+BC7 (Compressonator, 0.25):   27.21 |  94.59
+---
+
 === Grass001_4K-PNG_Color.png (4096x4096) ===
-BC1 (bc7enc):                3.12   | 80.89
-BC3 (bc7enc):                2.65   | 80.88
-BC7 (bc7enc):                14.3   | 90.67
-BC7 (bc7enc_perceptual):     8.88   | 92.74
-BC1 (Compressonator, 1.0):   1.38   | 78.57
-BC3 (Compressonator, 1.0):   1.56   | 76.15
-BC7 (Compressonator, 0.25):  169.42 | 90.74
+BC1 (bc7enc, 18):              3.28 |  80.89
+BC1 (bc7enc, 14):              1.25 |  80.70
+BC1 (Compressonator, 1.0):     1.35 |  78.57
+---
+BC3 (bc7enc, 18):              2.58 |  80.88
+BC3 (bc7enc, 14):              0.87 |  80.67
+BC3 (Compressonator, 1.0):     1.40 |  76.15
+---
+BC7 (bc7enc):                 11.49 |  90.67
+BC7 (bc7enc_perceptual):       8.86 |  92.74
+BC7 (Compressonator, 0.25):  167.19 |  90.74
+---
+
 === Grass001_4K-PNG_NormalGL.png (4096x4096) ===
-BC1 (bc7enc):                3.65   | 54.11
-BC3 (bc7enc):                3.25   | 54.11
-BC7 (bc7enc):                15.24  | 78.89
-BC7 (bc7enc_perceptual):     9.55   | 82.37
-BC1 (Compressonator, 1.0):   2.32   | 51.83
-BC3 (Compressonator, 1.0):   2.23   | 49.93
-BC7 (Compressonator, 0.25):  207.24 | 78.65
+BC1 (bc7enc, 18):              3.73 |  54.11
+BC1 (bc7enc, 14):              1.54 |  53.91
+BC1 (Compressonator, 1.0):     2.35 |  51.83
+---
+BC3 (bc7enc, 18):              3.53 |  54.11
+BC3 (bc7enc, 14):              1.15 |  53.86
+BC3 (Compressonator, 1.0):     2.04 |  49.93
+---
+BC7 (bc7enc):                 11.55 |  78.89
+BC7 (bc7enc_perceptual):       9.20 |  82.37
+BC7 (Compressonator, 0.25):  206.78 |  78.65
+---
+
 === PavingStones150_4K-PNG_Color.png (4096x2048) ===
-BC1 (bc7enc):                1.47   | 81.52
-BC3 (bc7enc):                1.3    | 81.52
-BC7 (bc7enc):                6.49   | 91.63
-BC7 (bc7enc_perceptual):     3.54   | 92.82
-BC1 (Compressonator, 1.0):   0.74   | 79.67
-BC3 (Compressonator, 1.0):   0.76   | 77.94
-BC7 (Compressonator, 0.25):  74.39  | 91.41
+BC1 (bc7enc, 18):              1.78 |  81.52
+BC1 (bc7enc, 14):              0.80 |  81.40
+BC1 (Compressonator, 1.0):     0.85 |  79.67
+---
+BC3 (bc7enc, 18):              1.57 |  81.52
+BC3 (bc7enc, 14):              0.43 |  81.36
+BC3 (Compressonator, 1.0):     0.84 |  77.94
+---
+BC7 (bc7enc):                  5.29 |  91.63
+BC7 (bc7enc_perceptual):       3.84 |  92.82
+BC7 (Compressonator, 0.25):   73.68 |  91.41
+---
+
 === PavingStones150_4K-PNG_NormalGL.png (4096x2048) ===
-BC1 (bc7enc):                1.81   | 65.25
-BC3 (bc7enc):                1.53   | 65.24
-BC7 (bc7enc):                7.79   | 84.7
-BC7 (bc7enc_perceptual):     4.96   | 85.66
-BC1 (Compressonator, 1.0):   0.77   | 63.47
-BC3 (Compressonator, 1.0):   0.83   | 62.54
-BC7 (Compressonator, 0.25):  115.88 | 83.94
+BC1 (bc7enc, 18):              1.92 |  65.25
+BC1 (bc7enc, 14):              0.70 |  65.09
+BC1 (Compressonator, 1.0):     0.76 |  63.47
+---
+BC3 (bc7enc, 18):              1.46 |  65.24
+BC3 (bc7enc, 14):              0.54 |  65.09
+BC3 (Compressonator, 1.0):     0.80 |  62.54
+---
+BC7 (bc7enc):                  6.48 |  84.70
+BC7 (bc7enc_perceptual):       5.41 |  85.66
+BC7 (Compressonator, 0.25):  113.21 |  83.94
+---
